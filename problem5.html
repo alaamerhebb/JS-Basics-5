@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem5</title>
+</head>
+<body>
+    <form>
+
+        <label for="number">Please enter a number</label>
+        <input type="number" name="number" id="number" required >
+
+        <label for="sign">Choose a sign:</label>
+
+        <select name="sign" id="sign">
+          <option value="sum" checked>+</option>
+          <option value="product">x</option>
+        </select>
+
+        <input type="button" value="submit" required onclick="operation()"> 
+    </form>
+    
+<script>
+
+function operation(){
+    var n = document.getElementById("number").value;
+    var sign = document.getElementById("sign").value;
+    var result=0;
+    if(sign === "sum"){
+        for(let i=1 ; i<=n ;i++){
+        result+= i;
+        }
+    }else{
+        result=1;
+        for(let i=1 ; i<=n ;i++){
+        result *= i;
+        }
+    }
+    
+    alert("The Result is " + result);
+    
+}
+</script>
+</body>
+</html>
